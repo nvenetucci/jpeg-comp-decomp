@@ -28,3 +28,21 @@ x_offset(in pixels) y_offset(in pixels)
   [DCT values zig-zag reordered and written out as %5d]
 ```
 *xsize* and *ysize* are multiples of 16 and are specified in ASCII characters. Input files are **only** multiples of 16. *Qvalue* is a floating point value specified in ASCII characters.
+
+### Setup
+Build with makefile:
+```bash
+$ make
+```
+
+### Compressor (Encoder) - *myDCT*
+Usage:
+```bash
+$ ./myDCT <input image> <quantfile> <qscale> <output file>
+```
+
+### Decompressor (Decoder) - *myIDCT*
+Usage:
+```bash
+$ ./myIDCT <input file> <quantfile> <output image>
+```
